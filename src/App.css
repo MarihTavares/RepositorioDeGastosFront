@@ -4,6 +4,7 @@
     background-color: var(--fundo-cards);
     width: 20em;
     height: 7em;
+    border-radius: 10px;
 }
 
 .cards_titulo{
@@ -30,4 +31,22 @@
     background-color: #363636;
     border-radius: 8px;
     border: solid 1px #5e5e5e;
+}
+
+.input {
+  height: 2.5em;
+  width: 90%;
+  padding: 2px 2px;     
+  background-color: #363636;
+  border: 1px solid #8f8f8f;
+  border-radius: 8px;
+  color: #ffffff;
+  outline: none;        
+  box-shadow: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

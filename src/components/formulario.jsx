@@ -37,20 +37,22 @@ function Formulario(){
     <div class="container py-4" id='formulario'>
 
       <div class="row">
-        <p class="col-2 text-center">Novo lançamento</p>
+        <p class="col-2 text-start mx-3 mb-1">Novo lançamento</p>
       </div>
 
-      <div class="row justify-content-around m-0 p-0 g-4">
-        <div class="form-floating mb-3 col-6">
-          <input type="text" className="form-control" value={descricao} 
-          onChange={(e) => setDescricao(e.target.value)} id="floatingInput"/>
-          <label for="floatingInput">Descrição</label>
+      <div class="row justify-content-center m-0 p-0">
+        <div class="mb-3 col-6">
+          <label class="cards_titulo mx-1">Descrição</label>
+          <div>
+            <input type="text" className="input" value={descricao} onChange={(e) => setDescricao(e.target.value)}/>
+          </div>
         </div>
-
-        <div class="form-floating mb-3 col-6">
-          <input type="number" className="form-control col-2" value={valor} onChange={handleChange} min={0} 
-          id="floatingInput"/>
-          <label for="floatingInput">Valor</label>
+        
+        <div class="mb-3 col-6">
+          <label class="cards_titulo mx-1">Valor</label>
+          <div>
+            <input type="number" className="input" value={valor} onChange={handleChange} min={0} />
+          </div>
         </div>
       </div>
 
