@@ -21,12 +21,43 @@ function CardsGerais(){
     }, [])
 
     return(
-        <>
-            <h2>Resumo</h2>
-            <p>Total de entradas: R$ {entradas}</p>
-            <p>Total de saídas: R$ {saidas}</p>
-            <p>Saldo: {saldo}</p>
-        </>
+        <div class="container">
+            <p class="col-5 text-start px-1 mb-0 fw-bold fs-4">Orçamento pessoal</p>
+            <p class="col-4 text-start px-1 fw-light fs-6">Controle de gastos - Entradas e Saídas</p>
+
+            <div className="row mb-3 mt-3">
+                <div class="card" className="col-4">
+                    <div class="card-body" >
+                        Total de entradas:
+                    </div>
+
+                    <div class="card-body">
+                        R$ {entradas}
+                    </div>
+                </div>
+
+                <div class="card" className="col-4">
+                    <div class="card-body" >
+                        Total de saídas:
+                    </div>
+
+                    <div class="card-body">
+                        R$ {saidas}
+                    </div>
+                </div>
+
+                <div class="card" className="col-4">
+                    <div class="card-body" >
+                        Saldo:
+                    </div>
+                    
+                    <div class="card-body">
+                        {saldo}
+                    </div>
+                </div>
+            </div>    
+
+        </div>
     )
 
 }
