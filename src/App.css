@@ -1,0 +1,21 @@
+/* PÁGINA DE CARDS */
+
+.cards{
+    background-color: var(--fundo-cards);
+    width: 20em;
+    height: 7em;
+}
+
+.cards_titulo{
+    color: #dddddd;
+    height: 2em;
+    font-size: small;
+}
+
+.cards_entrada{
+    color: #167448;
+}
+
+.cards_saida{
+    color: #b32d3a;
+}

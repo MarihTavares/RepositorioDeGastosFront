@@ -21,37 +21,37 @@ function CardsGerais(){
     }, [])
 
     return(
-        <div class="container">
-            <p class="col-5 text-start px-1 mb-0 fw-bold fs-4">Orçamento pessoal</p>
-            <p class="col-4 text-start px-1 fw-light fs-6">Controle de gastos - Entradas e Saídas</p>
+        <div class="container py-3">
+            <p class="col-5 text-start p-2 mb-0 fw-bold fs-4">Orçamento pessoal</p>
+            <p class="col-4 text-start px-2 fw-light fs-6 fst-italic">Controle de gastos - Entradas e Saídas</p>
 
-            <div className="row mb-3 mt-3">
-                <div class="card" className="col-4">
-                    <div class="card-body" >
-                        Total de entradas:
+            <div class="row mb-3 mt-3 pt-3 justify-content-around">
+                <div class="card col-2 cards">
+                    <div class="card-body pb-0 pt-4 cards_titulo">
+                        Entradas
                     </div>
 
-                    <div class="card-body">
+                    <div class="card-body fs-3 cards_entrada">
                         R$ {entradas}
                     </div>
                 </div>
 
-                <div class="card" className="col-4">
-                    <div class="card-body" >
-                        Total de saídas:
+                <div class="card col-2 cards">
+                    <div class="card-body pb-0 pt-4 cards_titulo" >
+                        Saídas
                     </div>
 
-                    <div class="card-body">
+                    <div class="card-body fs-3 cards_saida">
                         R$ {saidas}
                     </div>
                 </div>
 
-                <div class="card" className="col-4">
-                    <div class="card-body" >
-                        Saldo:
+                <div class="card col-2 cards">
+                    <div class="card-body pb-0 pt-4 cards_titulo" >
+                        Saldo
                     </div>
                     
-                    <div class="card-body">
+                    <div class="card-body cards_titulo">
                         {saldo}
                     </div>
                 </div>
