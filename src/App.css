@@ -10,7 +10,7 @@
 .cards_titulo{
     color: #dddddd;
     height: 2em;
-    font-size: small;
+    font-size: 13px;
 }
 
 .cards_entrada{
@@ -35,14 +35,25 @@
 
 .input {
   height: 2.5em;
-  width: 90%;
-  padding: 2px 2px;     
-  background-color: #363636;
-  border: 1px solid #8f8f8f;
+  width: 100%;
+  padding: 2px 5px;     
+  background-color: var(--fundo-cards);
+  border: 1px solid #5f5f5f;
   border-radius: 8px;
   color: #ffffff;
   outline: none;        
   box-shadow: none;
+}
+
+.input:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+#botao{
+    height: 2em;
+    border-radius: 8px;
+    border: none;
 }
 
 input[type="number"]::-webkit-inner-spin-button,

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { adicionarLancamento as adicionarLancamentoApi } from '../services/api'
+import { FaPlus } from 'react-icons/fa'
 
 function Formulario(){
     const [descricao, setDescricao] = useState('');
@@ -36,7 +37,7 @@ function Formulario(){
   return (
     <div class="container py-4" id='formulario'>
 
-      <div class="row">
+      <div class="row mb-3">
         <p class="col-2 text-start mx-3 mb-1">Novo lançamento</p>
       </div>
 
@@ -56,9 +57,9 @@ function Formulario(){
         </div>
       </div>
 
-      <div class="row justify-content-around m-0 g-4">
-        <div class="col-6 m-0">
-          <select class="form-select" id="floatingSelect" value={categoria} 
+      <div class="row justify-content-around m-0">
+        <div class="col-6">
+          <select class="form-select input" id="floatingSelect" value={categoria} 
           onChange={(e) => setCategoria(e.target.value)}>
             <option value="">Selecione a categoria:</option>
             <option value="ALIMENTACAO">ALIMENTAÇÃO</option>
@@ -70,8 +71,8 @@ function Formulario(){
           </select>
         </div>
 
-        <div class="col-6 m-0">
-          <select class="form-select col-6" id="floatingSelect" value={tipo} 
+        <div class="col-6">
+          <select class="form-select input" id="floatingSelect" value={tipo} 
           onChange={(e) => setTipo(e.target.value)}>
             <option value="">Selecione o tipo:</option>
             <option value="ENTRADA">ENTRADA</option>
@@ -80,8 +81,8 @@ function Formulario(){
         </div>
       </div>
 
-      <div class="row justify-content-center m-3">
-        <button class="col-6" onClick={adicionarLancamento}>Enviar</button>
+      <div class="row justify-content-center mt-5 mb-2">
+        <button class="col-6 align-items-center justify-content-center" id="botao" onClick={adicionarLancamento}><FaPlus class="me-1"/> Adicionar lançamento</button>
         {mensagem && <p>{mensagem}</p>}
       </div>
 
