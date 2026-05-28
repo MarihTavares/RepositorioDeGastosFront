@@ -34,42 +34,56 @@ function Formulario(){
   }
 
   return (
-    <>
-      <input
-        type="text"
-        value={descricao}
-        onChange={(e) => setDescricao(e.target.value)}
-        placeholder="Descrição do lançamento:"
-      />
+    <div class="container py-4" id='formulario'>
 
-      <input
-        type='number'
-        value={valor}
-        onChange={handleChange}
-        min={0}
-        placeholder='Valor:'
-      />
+      <div class="row">
+        <p class="col-2 text-center">Novo lançamento</p>
+      </div>
 
-      <select value={categoria} onChange={(e) => setCategoria(e.target.value)}>
-        <option value="">Selecione a categoria:</option>
-        <option value="ALIMENTACAO">ALIMENTAÇÃO</option>
-        <option value="TRABALHO">TRABALHO</option>
-        <option value="TRANSPORTE">TRANSPORTE</option>
-        <option value="MORADIA">MORADIA</option>
-        <option value="SAUDE">SAÚDE</option>
-        <option value="LAZER">LAZER</option>
-      </select>
+      <div class="row justify-content-around m-0 p-0 g-4">
+        <div class="form-floating mb-3 col-6">
+          <input type="text" className="form-control" value={descricao} 
+          onChange={(e) => setDescricao(e.target.value)} id="floatingInput"/>
+          <label for="floatingInput">Descrição</label>
+        </div>
 
-      <select value={tipo} onChange={(e) => setTipo(e.target.value)}>
-        <option value="">Selecione o tipo:</option>
-        <option value="ENTRADA">ENTRADA</option>
-        <option value="SAIDA">SAÍDA</option>
-      </select>
+        <div class="form-floating mb-3 col-6">
+          <input type="number" className="form-control col-2" value={valor} onChange={handleChange} min={0} 
+          id="floatingInput"/>
+          <label for="floatingInput">Valor</label>
+        </div>
+      </div>
 
-      <button onClick={adicionarLancamento}>Enviar</button>
-      {mensagem && <p>{mensagem}</p>}
+      <div class="row justify-content-around m-0 g-4">
+        <div class="col-6 m-0">
+          <select class="form-select" id="floatingSelect" value={categoria} 
+          onChange={(e) => setCategoria(e.target.value)}>
+            <option value="">Selecione a categoria:</option>
+            <option value="ALIMENTACAO">ALIMENTAÇÃO</option>
+            <option value="TRABALHO">TRABALHO</option>
+            <option value="TRANSPORTE">TRANSPORTE</option>
+            <option value="MORADIA">MORADIA</option>
+            <option value="SAUDE">SAÚDE</option>
+            <option value="LAZER">LAZER</option>
+          </select>
+        </div>
 
-    </>
+        <div class="col-6 m-0">
+          <select class="form-select col-6" id="floatingSelect" value={tipo} 
+          onChange={(e) => setTipo(e.target.value)}>
+            <option value="">Selecione o tipo:</option>
+            <option value="ENTRADA">ENTRADA</option>
+            <option value="SAIDA">SAÍDA</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row justify-content-center m-3">
+        <button class="col-6" onClick={adicionarLancamento}>Enviar</button>
+        {mensagem && <p>{mensagem}</p>}
+      </div>
+
+    </div>
   )
   
 }

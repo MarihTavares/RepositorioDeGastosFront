@@ -1,5 +1,5 @@
 :root {
-  --fundo-cards: #212529;
+  --fundo-cards: #2a2b2c;
 }
 
 * {
@@ -10,7 +10,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #121212;
+  background-color: #222222;
 }
 
 p {

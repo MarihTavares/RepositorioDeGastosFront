@@ -23,3 +23,11 @@
 .cards_saldo{
     color: #dddddd;
 }
+
+/* FORMULÁRIO */
+
+#formulario{
+    background-color: #363636;
+    border-radius: 8px;
+    border: solid 1px #5e5e5e;
+}
