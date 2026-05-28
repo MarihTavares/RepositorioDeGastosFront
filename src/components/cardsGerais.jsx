@@ -51,8 +51,8 @@ function CardsGerais(){
                         Saldo
                     </div>
                     
-                    <div class="card-body cards_titulo">
-                        {saldo}
+                    <div class="card-body fs-3 cards_saldo">
+                        R$ {saldo}
                     </div>
                 </div>
             </div>    
