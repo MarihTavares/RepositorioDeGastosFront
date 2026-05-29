@@ -1,5 +1,14 @@
-:root {
-  --fundo-cards: #2a2b2c;
+:root{
+  --fundo: #222222;
+  --cinza-bordas: #5e5e5e;
+  --cinza-claro: #363636;
+  --cinza-escuro: #2a2b2c;
+  --cinza-linha: #666666;
+  --branco: #dddddd;
+  --verde: #115c39;
+  --verde-claro: #7ebd9f;
+  --vermelho: #b32d3a;
+  --vermelho-claro: #db949b;
 }
 
 * {

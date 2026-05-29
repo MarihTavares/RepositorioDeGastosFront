@@ -13,15 +13,14 @@ function Lancamentos() {
   }, []);
 
   const corSaldo = (tipo) => {
-    if (tipo === "ENTRADA") return "cards_entrada";
-    if (tipo === "SAIDA") return "cards_saida";
+    if (tipo === "ENTRADA") return "verde";
+    if (tipo === "SAIDA") return "vermelho";
   };
 
   return (
-    <div className="container p-2 mt-3" id="formulario">
-      <div className="row px-3 titulo">
-        {" "}
-        <p>Lançamentos</p>{" "}
+    <div className="container p-2 mt-3 estrutura_card">
+      <div className="row px-3">
+        <p>Lançamentos</p>
       </div>
       <div className="row px-3">
         {lancamentos.map((l, i) => (
@@ -31,7 +30,7 @@ function Lancamentos() {
           >
             <div>
               <p className="m-0 fw-bold">{l.descricao}</p>
-              <p className="mb-1 subtitulo">{l.categoria}</p>
+              <p className="mb-1 titulo">{l.categoria}</p>
             </div>
 
             <div className="d-flex align-items-center gap-3">

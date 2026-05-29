@@ -15,8 +15,8 @@ function Media() {
   const maiorMedia = Math.max(...Object.values(medias));
 
   return (
-    <div className="container mt-3 mb-5 p-3" id="formulario">
-      <div className="row px-3 titulo">
+    <div className="container mt-3 mb-5 p-3 estrutura_card">
+      <div className="row px-3">
         <p>Média por categoria</p>
       </div>
 

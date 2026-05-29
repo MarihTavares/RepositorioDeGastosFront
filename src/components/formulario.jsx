@@ -36,14 +36,14 @@ function Formulario({ onAdicionar }) {
   };
 
   return (
-    <div className="container py-4" id="formulario">
+    <div className="container py-4 estrutura_card">
       <div className="row mb-3">
         <p className="col-2 text-start mx-3 mb-1">Novo lançamento</p>
       </div>
 
       <div className="row justify-content-center m-0 p-0">
         <div className="mb-3 col-6">
-          <label className="cards_titulo mx-1">Descrição</label>
+          <label className="titulo mx-1">Descrição</label>
           <div>
             <input
               type="text"
@@ -55,7 +55,7 @@ function Formulario({ onAdicionar }) {
         </div>
 
         <div className="mb-3 col-6">
-          <label className="cards_titulo mx-1">Valor</label>
+          <label className="titulo mx-1">Valor</label>
           <div>
             <input
               type="number"
@@ -104,7 +104,8 @@ function Formulario({ onAdicionar }) {
         <button
           className="col-6 align-items-center justify-content-center"
           id="botao"
-          onClick={adicionarLancamento}>
+          onClick={adicionarLancamento}
+        >
           <FaPlus className="me-1" /> Adicionar lançamento
         </button>
       </div>

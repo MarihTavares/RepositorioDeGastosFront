@@ -31,21 +31,21 @@ function CardsGerais() {
 
       <div className="row mb-3 mt-3 pt-3 justify-content-around">
         <div className="card col-2 cards">
-          <div className="card-body pb-0 pt-4 cards_titulo">Entradas</div>
+          <div className="card-body pb-0 pt-4 titulo">Entradas</div>
 
-          <div className="card-body fs-3 cards_entrada">R$ {entradas.toFixed(2)}</div>
+          <div className="card-body fs-3 verde">R$ {entradas.toFixed(2)}</div>
         </div>
 
         <div className="card col-2 cards">
-          <div className="card-body pb-0 pt-4 cards_titulo">Saídas</div>
+          <div className="card-body pb-0 pt-4 titulo">Saídas</div>
 
-          <div className="card-body fs-3 cards_saida">R$ {saidas.toFixed(2)}</div>
+          <div className="card-body fs-3 vermelho">R$ {saidas.toFixed(2)}</div>
         </div>
 
         <div className="card col-2 cards">
-          <div className="card-body pb-0 pt-4 cards_titulo">Saldo</div>
+          <div className="card-body pb-0 pt-4 titulo">Saldo</div>
 
-          <div className="card-body fs-3 cards_saldo">R$ {saldo.toFixed(2)}</div>
+          <div className="card-body fs-3 branco">R$ {saldo.toFixed(2)}</div>
         </div>
       </div>
     </div>
