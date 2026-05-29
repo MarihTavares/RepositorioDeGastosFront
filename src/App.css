@@ -14,7 +14,7 @@
 }
 
 .cards_entrada{
-    color: #167448;
+    color: #115c39;
 }
 
 .cards_saida{
@@ -60,4 +60,39 @@ input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.titulo{
+    color: #dddddd;
+    font-size: 20px;
+}
+
+.subtitulo{
+    font-size: 12px;
+}
+
+.tag_tipo{
+    padding: 0.5em 1em;
+    border-radius: 15px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.tag_entrada{
+    background-color: #7ebd9f;
+    color: #165236;
+}   
+
+.tag_saida{
+    background-color: #db949b;
+    color: #9e1b28;
+}
+
+.lancamento-item{
+    border-bottom: 1px solid #adadad;
+    padding: 1em;
+}
+
+.lancamento-item:last-child{
+    border-bottom: none;
 }
