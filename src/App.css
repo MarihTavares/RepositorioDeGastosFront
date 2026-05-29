@@ -89,10 +89,36 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .lancamento-item{
-    border-bottom: 1px solid #adadad;
+    border-bottom: 1px solid #666666;
     padding: 1em;
 }
 
 .lancamento-item:last-child{
     border-bottom: none;
+}
+
+.categoria-nome {
+  width: 150px;
+  font-weight: 500;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.barra-container {
+  flex: 1;
+  height: 3px;
+  background-color: #222222;
+}
+
+.barra-progresso {
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 2px;
+}
+
+.categoria-valor {
+  width: 70px;
+  text-align: right;
+  color: #ffffff;
+  flex-shrink: 0;
 }
