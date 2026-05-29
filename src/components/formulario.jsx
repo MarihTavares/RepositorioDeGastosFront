@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { adicionarLancamento as adicionarLancamentoApi } from '../services/api'
 import { FaPlus } from 'react-icons/fa'
 
-function Formulario(){
+function Formulario({onAdicionar}){
     const [descricao, setDescricao] = useState('');
     const [valor, setValor] = useState('');
     const [categoria, setCategoria] = useState('');
@@ -25,6 +25,7 @@ function Formulario(){
     if (!tipo)       return alert('Selecione o tipo');
 
     await adicionarLancamentoApi({descricao, valor, categoria, tipo})
+    onAdicionar()
 
     setDescricao('');
     setValor('');
