@@ -14,10 +14,10 @@ function App() {
 
   return(
     <>
-      <Cards key={atualizar}/>
+      <Cards key={`cards-${atualizar}`}/>
       <Formulario onAdicionar={handlerAtualizar}/>
-      <Lancamentos key={atualizar}/>
-      <Media key={atualizar}/>
+      <Lancamentos key={`lancamentos-${atualizar}`}/>
+      <Media key={`media-${atualizar}`}/>
     </>
   )
 }
