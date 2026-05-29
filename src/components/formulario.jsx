@@ -1,67 +1,81 @@
-import { useState } from 'react'
-import { adicionarLancamento as adicionarLancamentoApi } from '../services/api'
-import { FaPlus } from 'react-icons/fa'
+import { useState } from "react";
+import { adicionarLancamento as adicionarLancamentoApi } from "../services/api";
+import { FaPlus } from "react-icons/fa";
 
-function Formulario({onAdicionar}){
-    const [descricao, setDescricao] = useState('');
-    const [valor, setValor] = useState('');
-    const [categoria, setCategoria] = useState('');
-    const [tipo, setTipo] = useState('');
-    const [mensagem, setMensagem] = useState('');
+function Formulario({ onAdicionar }) {
+  const [descricao, setDescricao] = useState("");
+  const [valor, setValor] = useState("");
+  const [categoria, setCategoria] = useState("");
+  const [tipo, setTipo] = useState("");
+  const [mensagem, setMensagem] = useState("");
 
-    const handleChange = (e) => {
-        const raw = e.target.value;
+  const handleChange = (e) => {
+    const raw = e.target.value;
 
-        const num = Number(raw); // Retorna um number ao invés de uma String
-        if (num < 0) return;             
+    const num = Number(raw); // Retorna um number ao invés de uma String
+    if (num < 0) return;
 
-        setValor(num);
-    };
+    setValor(num);
+  };
 
-    const adicionarLancamento = async () => {
-    if (!descricao)  return alert('Informe a descrição');
-    if (!valor)      return alert('Informe o valor');
-    if (!categoria)  return alert('Selecione a categoria');
-    if (!tipo)       return alert('Selecione o tipo');
+  const adicionarLancamento = async () => {
+    if (!descricao) return alert("Informe a descrição");
+    if (!valor) return alert("Informe o valor");
+    if (!categoria) return alert("Selecione a categoria");
+    if (!tipo) return alert("Selecione o tipo");
 
-    await adicionarLancamentoApi({descricao, valor, categoria, tipo})
-    onAdicionar()
+    await adicionarLancamentoApi({ descricao, valor, categoria, tipo });
+    onAdicionar();
 
-    setDescricao('');
-    setValor('');
-    setCategoria('')
-    setTipo('');
-    setMensagem('Lançamento adicionado com sucesso!');
-    setTimeout(() => setMensagem(''), 3000);
-  }
+    setDescricao("");
+    setValor("");
+    setCategoria("");
+    setTipo("");
+    setMensagem("Lançamento adicionado com sucesso!");
+    setTimeout(() => setMensagem(""), 3000);
+  };
 
   return (
-    <div class="container py-4" id='formulario'>
-
-      <div class="row mb-3">
-        <p class="col-2 text-start mx-3 mb-1">Novo lançamento</p>
+    <div className="container py-4" id="formulario">
+      <div className="row mb-3">
+        <p className="col-2 text-start mx-3 mb-1">Novo lançamento</p>
       </div>
 
-      <div class="row justify-content-center m-0 p-0">
-        <div class="mb-3 col-6">
-          <label class="cards_titulo mx-1">Descrição</label>
+      <div className="row justify-content-center m-0 p-0">
+        <div className="mb-3 col-6">
+          <label className="cards_titulo mx-1">Descrição</label>
           <div>
-            <input type="text" className="input" value={descricao} onChange={(e) => setDescricao(e.target.value)}/>
+            <input
+              type="text"
+              className="input"
+              value={descricao}
+              onChange={(e) => setDescricao(e.target.value)}
+            />
           </div>
         </div>
-        
-        <div class="mb-3 col-6">
-          <label class="cards_titulo mx-1">Valor</label>
+
+        <div className="mb-3 col-6">
+          <label className="cards_titulo mx-1">Valor</label>
           <div>
-            <input type="number" className="input" value={valor} onChange={handleChange} min={0} />
+            <input
+              type="number"
+              className="input"
+              value={valor}
+              onChange={handleChange}
+              min={0}
+            />
           </div>
         </div>
       </div>
 
-      <div class="row justify-content-around m-0">
-        <div class="col-6">
-          <select class="form-select input" id="floatingSelect" value={categoria} 
-          onChange={(e) => setCategoria(e.target.value)}>
+      <div className="row justify-content-around m-0">
+        <div className="col-6">
+          <select
+            className="form-select input"
+            id="floatingSelect"
+            value={categoria}
+            onChange={(e) => setCategoria(e.target.value)}
+          >
             <option value="">Selecione a categoria:</option>
             <option value="ALIMENTACAO">ALIMENTAÇÃO</option>
             <option value="TRABALHO">TRABALHO</option>
@@ -72,9 +86,13 @@ function Formulario({onAdicionar}){
           </select>
         </div>
 
-        <div class="col-6">
-          <select class="form-select input" id="floatingSelect" value={tipo} 
-          onChange={(e) => setTipo(e.target.value)}>
+        <div className="col-6">
+          <select
+            className="form-select input"
+            id="floatingSelect"
+            value={tipo}
+            onChange={(e) => setTipo(e.target.value)}
+          >
             <option value="">Selecione o tipo:</option>
             <option value="ENTRADA">ENTRADA</option>
             <option value="SAIDA">SAÍDA</option>
@@ -82,13 +100,21 @@ function Formulario({onAdicionar}){
         </div>
       </div>
 
-      <div class="row justify-content-center mt-5 mb-2">
-        <button class="col-6 align-items-center justify-content-center" id="botao" onClick={adicionarLancamento}><FaPlus class="me-1"/> Adicionar lançamento</button>
-        {mensagem && <p>{mensagem}</p>}
+      <div className="row justify-content-center mt-5 mb-2">
+        <button
+          className="col-6 align-items-center justify-content-center"
+          id="botao"
+          onClick={adicionarLancamento}>
+          <FaPlus className="me-1" /> Adicionar lançamento
+        </button>
       </div>
 
+      {mensagem && (
+        <div className="row justify-content-center mt-2">
+          <p className="text-center text-success mb-0">{mensagem}</p>
+        </div>
+      )}
     </div>
-  )
-  
+  );
 }
-export default Formulario
+export default Formulario;

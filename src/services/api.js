@@ -27,7 +27,7 @@ export async function getTotalSaidas() {
 
 export async function getSaldo() {
     const res = await fetch(`${BASE_URL}/saldo`)
-    return res.text()
+    return res.json()
 }
 
 export async function getMedias() {
